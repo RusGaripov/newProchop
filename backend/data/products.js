@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "2",
     name: "Airpods Bluetooth Headphones",
     image: "/images/hi2.jpg",
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "3",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "4",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi2.jpg",
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "5",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "6",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: "7",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "8",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -104,7 +96,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "9",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
@@ -117,7 +108,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: "10",
     name: "Airpods wireless Bluetooth Headphones",
     image: "/images/hi.jpg",
     description:
