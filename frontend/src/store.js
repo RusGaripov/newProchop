@@ -15,7 +15,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { productListReducer, productDetailsReducer } from './reducers/productsReducer';
 import { cartReducer } from './reducers/cartReducer';
-import { userLoginReducer } from './reducers/userReducers';
+import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers';
 // import { authReducer } from './slices/auth';
 
 
@@ -38,6 +38,9 @@ const store = configureStore({
         productDetails: productDetailsReducer,
         cart: cartReducer,
         userLogin: userLoginReducer,
+        userRegister: userRegisterReducer,
+        userDetails: userDetailsReducer,
+        userUpdateProfile: userUpdateProfileReducer,
     },
     preloadedState: initialState,
 })

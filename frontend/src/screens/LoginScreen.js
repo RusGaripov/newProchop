@@ -28,9 +28,9 @@ const LoginScreen = () => {
     console.log(location.pathname)
 
     useEffect(() => {
+        console.log(location)
         if (userInfo) {
-            // navigate(`/cart/${params.id}&qty=${qty}`) history.push бла блабла
-            // navigate() куда-то
+            navigate(`/`)
         }
     })
 
@@ -63,16 +63,18 @@ const LoginScreen = () => {
                         onChange={(e) => setPassword(e.target.value)}>
                     </Form.Control>
                 </Form.Group>
+                <div style={{'marginTop':'20px'}}>
                 <Button type='submit' variant='primary'>
                     Sign In
                 </Button>
+                </div>
             </Form>
             <Row className='py-3'>
                 <Col>
                     New Customer?{' '}
-                    {/* <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+                    <Link to={'/register'}>
                         Register
-                    </Link> */}
+                    </Link>
                 </Col>
             </Row>
         </FormContainer>
