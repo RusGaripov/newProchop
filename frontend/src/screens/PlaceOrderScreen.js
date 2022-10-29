@@ -46,27 +46,27 @@ const PlaceOrderScreen = () => {
         console.log(cart)
         dispatch(
             createOrder({
-                // orderItems: cart.cartItems,
-                // shippingAddress: cart.shippingAddress,
-                // paymentMethod: cart.paymentMethod,
-                // itemsPrice: cart.itemsPrice,
-                // shippingPrice: cart.shippingPrice,
-                // taxPrice: cart.taxPrice,
-                // totalPrice: cart.totalPrice,
-                orderItems: [{
-                    "product": "635410a7eb7a8459e6666f41",
-                     "name": '41224d776a326fb40f000001',
-                    "image": "/images/hi.jpg",
-                    "price": 189.99,
-                    "countInStock": 23,
-                    "qty": 3
-                  }],
-                shippingAddress: {city:1,country:21,postalCode:2,address:"klk"},
-                paymentMethod: 'PayPal2',
-                itemsPrice: '123',
-                shippingPrice: '200',
-                taxPrice: '8',
-                totalPrice: '1000',
+                orderItems: cart.cartItems,
+                shippingAddress: cart.shippingAddress,
+                paymentMethod: cart.paymentMethod,
+                itemsPrice: cart.itemsPrice,
+                shippingPrice: cart.shippingPrice,
+                taxPrice: cart.taxPrice,
+                totalPrice: cart.totalPrice,
+                // orderItems: [{
+                //     "product": "635410a7eb7a8459e6666f41",
+                //      "name": '41224d776a326fb40f000001',
+                //     "image": "/images/hi.jpg",
+                //     "price": 189.99,
+                //     "countInStock": 23,
+                //     "qty": 3
+                //   }],
+                // shippingAddress: {city:1,country:21,postalCode:2,address:"klk"},
+                // paymentMethod: 'PayPal2',
+                // itemsPrice: '123',
+                // shippingPrice: '200',
+                // taxPrice: '8',
+                // totalPrice: '1000',
             })
 
         )
