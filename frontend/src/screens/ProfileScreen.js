@@ -36,7 +36,6 @@ const ProfileScreen = () => {
 
     useEffect(() => {
         if (!userInfo) {
-            console.log('бум')
             // navigate(`/login`)
         } else {
             if (!user.name) {

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { register } from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
-import { useNavigate } from 'react-router-dom';
 
 
 const RegisterScreen = () => {
@@ -24,15 +23,11 @@ const RegisterScreen = () => {
 
     const navigate = useNavigate();
 
-    const location = useLocation();
-
-
     useEffect(() => {
-        console.log(location)
         if (userInfo) {
             navigate(`/`)
         }
-    })
+    },[userInfo])
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -95,9 +90,6 @@ const RegisterScreen = () => {
             <Row className='py-3'>
                 <Col>
                     Have an account?{' '}
-                    {/* <Link to={redirect ? `/login?redirect=${redirect}` : '/register'}>
-                        Login
-                    </Link> */}
                     <Link to={'/login'}>
                         Login
                     </Link>
