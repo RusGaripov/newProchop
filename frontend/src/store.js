@@ -13,7 +13,13 @@
 // export default store 
 
 import { configureStore } from '@reduxjs/toolkit';
-import { productListReducer, productDetailsReducer, productDeleteReducer } from './reducers/productsReducer';
+import {
+    productListReducer,
+    productDetailsReducer,
+    productDeleteReducer,
+    productCreateReducer,
+    productUpdateReducer
+} from './reducers/productsReducer';
 import { cartReducer } from './reducers/cartReducer';
 import {
     userLoginReducer,
@@ -24,7 +30,14 @@ import {
     userDeleteReducer,
     userUpdateReducer
 } from './reducers/userReducers';
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer, orderDeliverReducer } from './reducers/orderReducer';
+import {
+    orderCreateReducer,
+    orderDetailsReducer,
+    orderPayReducer,
+    orderListMyReducer,
+    orderDeliverReducer,
+    orderListReducer
+} from './reducers/orderReducer';
 // import { authReducer } from './slices/auth';
 
 
@@ -53,6 +66,8 @@ const store = configureStore({
         productList: productListReducer,
         productDetails: productDetailsReducer,
         productDelete: productDeleteReducer,
+        productCreate: productCreateReducer,
+        productUpdate: productUpdateReducer,
         cart: cartReducer,
         userLogin: userLoginReducer,
         userRegister: userRegisterReducer,
@@ -63,6 +78,7 @@ const store = configureStore({
         orderPay: orderPayReducer,
         orderDeliver: orderDeliverReducer,
         orderListMy: orderListMyReducer,
+        orderList: orderListReducer,
         userList: userListReducer,
         userDelete: userDeleteReducer,
         userUpdate: userUpdateReducer,
