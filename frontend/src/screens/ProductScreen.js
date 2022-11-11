@@ -144,7 +144,7 @@ const ProductScreen = () => {
                     </Row>
                     <Row>
                         <Col md={6}>
-                            <h2>Reviews</h2>
+                            <h2 className='mt-3'>Reviews</h2>
                             {product.reviews.length === 0 && <Message>No Reviews</Message>}
                             <ListGroup variant='flush'>
                                 {product.reviews.map((review) => (
@@ -180,7 +180,7 @@ const ProductScreen = () => {
                                                     onChange={(e) => setComment(e.target.value)}
                                                 ></Form.Control>
                                             </Form.Group>
-                                            <Button type='submit' variant='primary'>
+                                            <Button type='submit' variant='primary' className='mt-3'>
                                                 Submit
                                             </Button>
                                         </Form>)

@@ -30,11 +30,11 @@ const Header = () => {
             <Navbar.Brand>ProShop</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" style={{ 'flexGrow': 0 }}>
+          <Navbar.Collapse id="basic-navbar-nav" className='md-d-flex justify-content-between'>
             <SearchBox />
             <Nav className="ml-auto">
               <LinkContainer to='/cart'>
-                <Nav.Link><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
+                <Nav.Link className='me-3'><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
