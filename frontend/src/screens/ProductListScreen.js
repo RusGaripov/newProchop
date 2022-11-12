@@ -26,7 +26,6 @@ const ProductListScreen = () => {
 
     const { loading: loadingCreate, success: successCreate, error: errorCreate, product: createdProduct } = productCreate
 
-    console.log(productCreate)
     const userLogin = useSelector(state => state.userLogin)
 
     const { userInfo } = userLogin
@@ -55,7 +54,6 @@ const ProductListScreen = () => {
 
 
     const createProductHandler = () => {
-        console.log(createdProduct)
         dispatch(createProduct())
     }
     return (

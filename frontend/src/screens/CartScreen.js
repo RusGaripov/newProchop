@@ -14,8 +14,6 @@ const CartScreen = () => {
 
   const productId = params ? params.id.split('&')[0] : 1
 
-  console.log(location.pathname)
-
   const qty = location.pathname ? Number(location.pathname.split('=')[1]) : 1
 
   const dispatch = useDispatch()
@@ -30,7 +28,6 @@ const CartScreen = () => {
   useEffect(() => {
 
     if (productId) {
-      console.log(qty, location)
       dispatch(addToCart(productId, qty))
     }
   }, [dispatch, productId, qty])
@@ -40,7 +37,6 @@ const CartScreen = () => {
   }
 
   const checkoutHandler = () => {
-    console.log('proceed to checkout')
     navigate(`/shipping`)
   }
 

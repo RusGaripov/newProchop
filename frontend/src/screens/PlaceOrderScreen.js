@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
-import Loader from '../components/Loader'
-import FormContainer from '../components/FormContainer'
 import CheckoutSteps from '../components/CheckoutSteps'
-import { saveShippingAddress } from '../actions/cartActions'
 import { createOrder } from '../actions/orderActions'
 
 const PlaceOrderScreen = () => {
@@ -43,7 +40,6 @@ const PlaceOrderScreen = () => {
     }, [navigate, success])
 
     const placeOrderHandler = () => {
-        console.log(cart)
         dispatch(
             createOrder({
                 orderItems: cart.cartItems,
@@ -53,20 +49,6 @@ const PlaceOrderScreen = () => {
                 shippingPrice: cart.shippingPrice,
                 taxPrice: cart.taxPrice,
                 totalPrice: cart.totalPrice,
-                // orderItems: [{
-                //     "product": "635410a7eb7a8459e6666f41",
-                //      "name": '41224d776a326fb40f000001',
-                //     "image": "/images/hi.jpg",
-                //     "price": 189.99,
-                //     "countInStock": 23,
-                //     "qty": 3
-                //   }],
-                // shippingAddress: {city:1,country:21,postalCode:2,address:"klk"},
-                // paymentMethod: 'PayPal2',
-                // itemsPrice: '123',
-                // shippingPrice: '200',
-                // taxPrice: '8',
-                // totalPrice: '1000',
             })
 
         )

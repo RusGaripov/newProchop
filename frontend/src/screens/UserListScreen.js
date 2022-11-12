@@ -27,7 +27,6 @@ const UserListScreen = () => {
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
-            console.log(users)
             dispatch(listUsers())
         } else {
             navigate('/login')

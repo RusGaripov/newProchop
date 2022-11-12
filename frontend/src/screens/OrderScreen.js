@@ -68,14 +68,13 @@ const PlaceOrderScreen = () => {
     }, [dispatch, orderId, successPay, successDeliver, order])
 
     const successPaymentHandler = (paymentResult) => {
-        console.log(paymentResult)
         dispatch(payOrder(orderId, paymentResult))
     }
 
-    const deliverHandler = (order) => {
-        console.log(order)
-        // dispatch(deliverOrder(order))
-    }
+    // const deliverHandler = (order) => {
+    //     console.log(order)
+    //     // dispatch(deliverOrder(order))
+    // }
 
     return loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message>
         : <>

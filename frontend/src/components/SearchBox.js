@@ -7,11 +7,6 @@ const SearchBox = () => {
 
     const navigate = useNavigate();
 
-
-    useEffect(()=>{
-        console.log(keyword)
-    },[keyword])
-
     const submitHandler = (e) => {
         e.preventDedault()
         if (keyword.trim()) {
